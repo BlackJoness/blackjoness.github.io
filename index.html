@@ -85,9 +85,11 @@
 
   .reels{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
   .reel{display:block; text-decoration:none; color:inherit;}
-  .reel .frame{aspect-ratio:9/16; background:var(--tile); display:grid; place-items:center; position:relative; overflow:hidden; transition:background .15s ease;}
-  .reel .frame::after{content:""; width:52px; height:52px; border-radius:50%; background:var(--blue); -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'><circle cx='26' cy='26' r='26' fill='white'/><path d='M21 17l14 9-14 9z' fill='black'/></svg>") center/contain no-repeat; mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'><circle cx='26' cy='26' r='26' fill='white'/><path d='M21 17l14 9-14 9z' fill='black'/></svg>") center/contain no-repeat;}
-  .reel:hover .frame{background:var(--line);}
+  .reel .frame{aspect-ratio:9/16; background:var(--tile) center/cover no-repeat; display:grid; place-items:center; position:relative; overflow:hidden;}
+  .reel .frame::before{content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,.45), rgba(0,0,0,0) 55%);}
+  .reel .play{position:relative; width:56px; height:56px; border-radius:50%; background:var(--blue); display:grid; place-items:center; box-shadow:0 2px 14px rgba(0,0,0,.35); transition:transform .15s ease;}
+  .reel .play svg{width:22px; height:22px; display:block; margin-left:3px;}
+  .reel:hover .play{transform:scale(1.06);}
   .reel .cap{font-size:13.5px; color:var(--mute); margin-top:8px; line-height:1.35;}
   .reel .cap b{display:block; color:var(--ink); font-weight:600;}
   @media (max-width:640px){ .reels{grid-template-columns:repeat(2,1fr);} }
@@ -167,10 +169,10 @@
         <p class="small">A peça com a influenciadora passou de 770 curtidas e 80 comentários.</p>
       </div>
       <div class="reels">
-        <a class="reel" href="https://www.instagram.com/reel/DF-iTm-M9Cz/"><div class="frame"></div><div class="cap"><b>Com @jeehnascimentoo</b>12 de fevereiro de 2025. 775 curtidas, 86 comentários</div></a>
-        <a class="reel" href="https://www.instagram.com/reel/DGOAMTuOqU-/"><div class="frame"></div><div class="cap"><b>Com @jeehnascimentoo</b>fevereiro de 2025</div></a>
-        <a class="reel" href="https://www.instagram.com/reel/DHL_fhTv3UY/"><div class="frame"></div><div class="cap"><b>Institucional, @settaenergia</b>março de 2025</div></a>
-        <a class="reel" href="https://www.instagram.com/reel/DH6IGbbJCuT/"><div class="frame"></div><div class="cap"><b>Institucional, @settaenergia</b>abril de 2025</div></a>
+        <a class="reel" href="https://www.instagram.com/reel/DF-iTm-M9Cz/"><div class="frame" style="background-image:url('capas/capa-setta-1.jpg')"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z" fill="#fff"/></svg></span></div><div class="cap"><b>Com @jeehnascimentoo</b>12 de fevereiro de 2025. 775 curtidas, 86 comentários</div></a>
+        <a class="reel" href="https://www.instagram.com/reel/DGOAMTuOqU-/"><div class="frame" style="background-image:url('capas/capa-setta-2.jpg')"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z" fill="#fff"/></svg></span></div><div class="cap"><b>Com @jeehnascimentoo</b>fevereiro de 2025</div></a>
+        <a class="reel" href="https://www.instagram.com/reel/DHL_fhTv3UY/"><div class="frame" style="background-image:url('capas/capa-setta-3.jpg')"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z" fill="#fff"/></svg></span></div><div class="cap"><b>Institucional, @settaenergia</b>março de 2025</div></a>
+        <a class="reel" href="https://www.instagram.com/reel/DH6IGbbJCuT/"><div class="frame" style="background-image:url('capas/capa-setta-4.jpg')"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z" fill="#fff"/></svg></span></div><div class="cap"><b>Institucional, @settaenergia</b>abril de 2025</div></a>
       </div>
     </div>
   </article>
@@ -208,10 +210,10 @@
         <p class="small">Gravados no período da Caixa Preta e publicados pela marca em junho de 2026.</p>
       </div>
       <div class="reels">
-        <a class="reel" href="https://www.instagram.com/reel/DZaNNuDPIGa/"><div class="frame"></div><div class="cap"><b>@grilloltda</b>publicado em 10 de junho de 2026</div></a>
-        <a class="reel" href="https://www.instagram.com/reel/DZfWzmbPwjD/"><div class="frame"></div><div class="cap"><b>@grilloltda</b>publicado em 12 de junho de 2026</div></a>
-        <a class="reel" href="https://www.instagram.com/reel/DaA2JX7upNf/"><div class="frame"></div><div class="cap"><b>@grilloltda</b>publicado em 25 de junho de 2026</div></a>
-        <a class="reel" href="https://www.instagram.com/reel/DaDiAKgOVn0/"><div class="frame"></div><div class="cap"><b>@grilloltda</b>publicado em 26 de junho de 2026</div></a>
+        <a class="reel" href="https://www.instagram.com/reel/DZaNNuDPIGa/"><div class="frame" style="background-image:url('capas/capa-grillo-1.jpg')"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z" fill="#fff"/></svg></span></div><div class="cap"><b>@grilloltda</b>publicado em 10 de junho de 2026</div></a>
+        <a class="reel" href="https://www.instagram.com/reel/DZfWzmbPwjD/"><div class="frame" style="background-image:url('capas/capa-grillo-2.jpg')"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z" fill="#fff"/></svg></span></div><div class="cap"><b>@grilloltda</b>publicado em 12 de junho de 2026</div></a>
+        <a class="reel" href="https://www.instagram.com/reel/DaA2JX7upNf/"><div class="frame" style="background-image:url('capas/capa-grillo-3.jpg')"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z" fill="#fff"/></svg></span></div><div class="cap"><b>@grilloltda</b>publicado em 25 de junho de 2026</div></a>
+        <a class="reel" href="https://www.instagram.com/reel/DaDiAKgOVn0/"><div class="frame" style="background-image:url('capas/capa-grillo-4.jpg')"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z" fill="#fff"/></svg></span></div><div class="cap"><b>@grilloltda</b>publicado em 26 de junho de 2026</div></a>
       </div>
     </div>
   </article>
